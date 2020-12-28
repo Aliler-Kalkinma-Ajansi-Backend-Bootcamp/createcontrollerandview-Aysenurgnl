@@ -16,6 +16,7 @@ namespace Web.Controllers
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
+          
         }
 
         public IActionResult Index()
@@ -26,6 +27,10 @@ namespace Web.Controllers
         public IActionResult Privacy()
         {
             return View();
+        }
+        public IActionResult Login()
+        {
+            return View("Index.cshtml");
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
